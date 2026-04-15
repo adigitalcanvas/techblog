@@ -1,3 +1,6 @@
+:root {
+    --bg-color: #CCC7C7; 
+}
 /* This applies to every single piece of text on the site */
 html, body {
     margin: 0;
