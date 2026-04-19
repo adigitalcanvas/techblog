@@ -6,76 +6,37 @@
     <link rel="stylesheet" href="style.css">
     <title>Contact Me</title>
     <style>
-     /*   body {
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #ccc7c7;
-        } */
+    .main-header {
+    position: absolute; /* Stays at the top even if you scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligns link to the right */
+    padding: 40px 15% 0;
+    box-sizing: border-box;
+    }
 
+    .home_link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 4px;
+}
         body {
            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             background-color: #ccc7c7;
-            position: relative; /* Add this to anchor the absolute child */
         }
 
-        /*
-        .home-link {
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-            text-decoration: none;
-            text-transform: none;
-            color: #1a1a1a;
-            width: 100%;
-            display: flex;
-            color: var(--text-primary);
-            font-size: 18px;
-            justify-content: flex-end;
-            padding: 40px 15% 0;
-            box-sizing: border-box;
-            gap: 30px;
-        }
-
-        .home-link:hover {
-            
-            color: #4f46e5; 
-            border-bottom: 2px solid #4f46e5;
-        } */
-
-      /*  .home_link {
-                position: absolute; /* Takes it out of the flex row */
-                top: 20px;          /* Distance from top */
-                right: 140px;        /* Distance from right */
+        
     
-                text-decoration: none;
-                color: #1a1a1a;
-                font-size: 18px;
-                font-family: inherit;
-                transition: all 0.3s ease;
-        }
-*/
-/*   .home_link {
-        top:20px;
-        right:140px;
-        text-decoration: none;
-        color: #1a1a1a;
-        font-size: 18px;
-        font-family: inherit;
-        transition: all 0.3s ease;
-    }
-    
-    .home_link:hover {
-            color: #000002; 
-            border-bottom: 2px solid #01010c;
-        }
-*/
 
         .contact-container {
             background: white;
@@ -84,6 +45,8 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             width: 100%;
             max-width: 450px;
+            z-index: 1;
+            margin-top: 40px;
         }
 
         h2 {
@@ -143,29 +106,18 @@
         button:active {
             transform: translateY(0);
         }
-.main-header {
-    position: fixed; /* Stays at the top even if you scroll */
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* Aligns link to the right */
-    padding: 20px 50px;
-    box-sizing: border-box;
-}
 
-.home_link {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-size: 18px;
-}
+
+
    
     </style>
 </head>
 <body>
    
 <header class="main-header">
+    <nav>
     <a href="https://adigitalcanvas.github.io/techblog/" class="home_link">Home</a>
+    </nav>
 </header>
 
 <div class="contact-container">
