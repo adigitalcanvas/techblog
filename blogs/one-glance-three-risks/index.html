@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HCX · Workforce Snapshot | People. Process. Performance.</title>
+    <title>Workforce Snapshot · Pure Content View</title>
     <style>
+        
         * {
             margin: 0;
             padding: 0;
@@ -13,391 +13,209 @@
         }
 
         body {
-            background-color: #CCC7C7;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-            color: #1e1e2a;
-            line-height: 1.5;
-        }
-
-        /* main container – matches portfolio width & rhythm */
-        .container {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 2rem 1.8rem 4rem;
-        }
-
-        /* header / nav – mirrors the clean, minimal portfolio style */
-        .site-header {
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid #e6e6ea;
-            padding-bottom: 1.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .logo-area h1 {
-            font-size: 1.8rem;
-            font-weight: 550;
-            letter-spacing: -0.3px;
+            background: #ffffff;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             color: #111;
+            line-height: 1.55;
+            padding: 2rem 1.2rem;
         }
 
-        .logo-area p {
-            font-size: 0.85rem;
-            color: #5b5b6b;
-            margin-top: 0.25rem;
-        }
-
-        .portfolio-nav {
-            display: flex;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-            font-size: 0.9rem;
-            font-weight: 450;
-        }
-
-        .portfolio-nav a {
-            text-decoration: none;
-            color: #2c2c3a;
-            transition: color 0.2s;
-            border-bottom: 1px dotted transparent;
-        }
-
-        .portfolio-nav a:hover {
-            color: #0a5b4b;
-            border-bottom-color: #0a5b4b;
-        }
-
-        /* blog / post styling – clean, readable, human */
-        .blog-post {
+    
+        .simple-content {
+            max-width: 880px;
+            margin: 0 auto;
             background: white;
-            border-radius: 24px;
-            padding: 2rem 2rem 2.5rem;
-            margin: 2rem 0 2rem;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
-            border: 1px solid #efefef;
         }
 
-        .post-title {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+        /* headings: just bigger, bold, clean */
+        h1 {
             font-size: 2.2rem;
-            font-weight: 400;
-            letter-spacing: -0.02em;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem 0;
             line-height: 1.2;
-            margin-bottom: 0.75rem;
-            text-align: center;
-        }
-
-        .post-meta {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-            color: #6c6c7c;
-            font-size: 0.85rem;
-            border-left: 3px solid #cbd5e1;
-            padding-left: 0.9rem;
-            margin: 0.5rem 0 1.8rem 0;
-        }
-
-        .dashboard-img-placeholder {
-            background: #f3f4f6;
-            border-radius: 20px;
-            padding: 3rem 1.5rem;
-            text-align: center;
-            margin: 1.8rem 0 2rem;
-            border: 1px dashed #bac8d9;
-            transition: all 0.2s;
-        }
-
-        .dashboard-img-placeholder p {
-            color: #4a5568;
-            font-size: 0.9rem;
-        }
-
-        .badge-note {
-            background: #f0f2f5;
-            display: inline-block;
-            padding: 0.2rem 0.7rem;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: #2c5f4e;
+            letter-spacing: -0.01em;
         }
 
         h2 {
-            font-size: 1.6rem;
-            font-weight: 450;
-            margin: 1.5rem 0 0.75rem;
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin: 1.4rem 0 0.6rem 0;
+            border-bottom: 1px solid #e2e2e2;
+            padding-bottom: 0.2rem;
         }
 
         h3 {
-            font-size: 1.25rem;
-            font-weight: 460;
-            margin: 1.4rem 0 0.5rem;
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.4rem 0;
         }
 
-        .risk-list {
-            background-color: #fefaf5;
-            border-left: 4px solid #d97706;
-            padding: 1.2rem 1.5rem;
-            margin: 1.3rem 0;
-            border-radius: 16px;
-            list-style: none;
+        /* normal text */
+        p, li, .meta-text, .block-text {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
         }
 
-        .risk-list li {
-            margin-bottom: 0.7rem;
-            display: flex;
-            gap: 0.6rem;
-            align-items: baseline;
+        /* simple lists: no custom bullets, just indentation */
+        ul, ol {
+            margin: 0.75rem 0 1rem 1.8rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
         }
 
-        .risk-list strong {
-            font-weight: 620;
-            min-width: 120px;
+        /* standard link style — blue underline, normal */
+        a {
+            color: #0066cc;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        a:hover {
+            color: #004499;
+            text-decoration: underline;
         }
 
-        .arrow-steps {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin: 1.2rem 0 1.8rem;
-            font-weight: 500;
-            background: #f8fafc;
-            padding: 1rem 1.2rem;
-            border-radius: 48px;
-            justify-content: center;
+        /* images: responsive, no extra graphics */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 0;
+            box-shadow: none;
         }
 
-        .arrow-steps span {
-            background: white;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-        }
-
-        .insight-quote {
-            font-style: normal;
-            background: #f0fdf4;
-            padding: 1rem 1.5rem;
-            border-radius: 20px;
-            margin: 1.8rem 0;
-            color: #14532d;
-            font-weight: 470;
-            border: 1px solid #dcfce7;
-        }
-
-        .kaggle-section {
-            background: #f9f9ff;
-            border-radius: 24px;
-            padding: 1.4rem 1.8rem;
-            margin: 2rem 0 1.5rem;
-            border: 1px solid #e2e8f0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .kaggle-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-kaggle {
-            background: #20beff0c;
-            border: 1px solid #cbdff2;
-            padding: 0.45rem 1rem;
-            border-radius: 32px;
-            font-size: 0.85rem;
-            text-decoration: none;
-            font-weight: 500;
-            color: #1e293b;
-            transition: 0.2s;
-        }
-
-        .btn-kaggle:hover {
-            background: #eef2ff;
-            border-color: #5b8cbc;
-        }
-
+        /* simple separator line */
         hr {
-            margin: 2rem 0 1rem;
+            margin: 2rem 0 1.5rem;
             border: 0;
             height: 1px;
-            background: #e2e8f0;
+            background: #ddd;
         }
 
-        .footer-note {
+        /* inline metadata readability */
+        .post-meta-plain {
+            font-size: 0.85rem;
+            color: #4a4a4a;
+            margin: 0.3rem 0 1.2rem 0;
+            border-left: 2px solid #ccc;
+            padding-left: 0.75rem;
+        }
+
+        /* no background boxes, no rounded corners, no shadows */
+        .plain-block {
+            margin: 1rem 0;
+        }
+
+        .simple-quote {
+            margin: 1rem 0;
+            font-style: normal;
+            border-left: 3px solid #aaa;
+            padding-left: 1rem;
+            background: transparent;
+        }
+
+        /* footer text small but readable */
+        .footer-simple {
+            margin-top: 2.5rem;
             font-size: 0.8rem;
-            color: #5c5c6e;
+            color: #4b5563;
+            border-top: 1px solid #eaeaea;
+            padding-top: 1.5rem;
             text-align: center;
-            margin-top: 3rem;
-            border-top: 1px solid #e9e9ef;
-            padding-top: 2rem;
-        }
-
-        @media (max-width: 700px) {
-            .container {
-                padding: 1rem 1.2rem 3rem;
-            }
-
-            .blog-post {
-                padding: 1.5rem;
-            }
-
-            .post-title {
-                font-size: 1.8rem;
-            }
-
-            .risk-list strong {
-                min-width: 100px;
-            }
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-
-        <!-- header - consistent with the portfolio style: People. Process. Performance. 
-        <div class="site-header">
-            <div class="logo-area">
-                <h1>People. Process. Performance.</h1>
-                <p>What, when, and how make the difference.</p>
-            </div>
-            <div class="portfolio-nav">
-                <a href="#">Projects</a>
-                <a href="#">Archive</a>
-                <a href="#">New Build</a>
-                <a href="#" style="border-bottom: 2px solid #0a5b4b;">Blog</a>
-            </div>
-        </div>-->
-
-        <!-- main blog post: Workforce Snapshot -->
-        <article class="blog-post">
-            <h1 class="post-title">One Glance, Three Risks: A Workforce Snapshot That Sparks Better Questions</h1>
-            <div class="post-meta">📊 HR metrics &nbsp;|&nbsp; 🧠 OD lens &nbsp;|&nbsp; ⚡ diagnostic snapshot</div>
-
-            <p style="margin-bottom:1rem;">Not every dashboard is built for monthly review
-                meetings.<br>
-                Some are built for that quiet moment when a CHRO or VP-HR says:</p>
-
-            <div
-                style="background:#f1f5f9; padding:1rem 1.5rem; border-radius: 20px; margin-bottom: 1.2rem; font-style: normal; border-left: 3px solid #2c3e50;">
-                <em>“Show me where we might be vulnerable — before I walk into the next talent review.”</em>
-            </div>
-
-            <p>This is one such view.</p>
-
-            <!-- IMAGE PLACEHOLDER: replace with actual dashboard screenshot -->
-            <div class="dashboard-img-placeholder">
-                <p style="margin-top: 14px;">⬇️ Workforce Summary & Insights (715 employees) ⬇️</p>
-                <div
-                    style="background:#e9ecef; width:100%; min-height: 200px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color:#4b5563; font-size:0.9rem; margin-top: 0.8rem;">
-                    <img src="https://adigitalcanvas.github.io/hcx/blogs/one-glance-three-risks/Workforce_Summary_and_Insights.jpg"
-                        alt="Workforce Dashboard" style="width:100%; border-radius:20px; margin-top:0.8rem;">
-                </div>
-
-            </div>
-
-            <p>This view is designed specifically for those high-level moments where stakeholders need to identify
-                organizational risks at a glance.</p>
-
-            <h2>The Strategy Behind the Dashboard</h2>
-            <p style="margin-bottom: 1.2rem;">Standard dashboards tell us what happened <em>last month</em>. This view
-                tells us <strong>where to look
-                    next</strong>. Instead of a deep dive into every metric, this layout functions as a
-                <strong>diagnostic tool</strong> — meant for the leader who has five minutes to spot "leaks" in the
-                talent pipeline or cultural friction points before they become systemic crises.
-            </p>
-
-            <p>In this actual snapshot of <strong>715 employees</strong>, three signals stood out immediately:</p>
-            <ul class="risk-list">
-                <li><strong>📍 52% of the workforce</strong> in just two departments (Delivery + Sales) →
-                    <strong>concentration risk</strong>
-                </li>
-                <li><strong>📍 Less than 1% early-career</strong> vs 65%+ mid/ageing workforce → <strong>pipeline
-                        risk</strong></li>
-                <li><strong>📍 15% new (<3 years tenure)</strong> alongside 65% long-tenured staff → <strong>knowledge
-                                transfer risk</strong></li>
-            </ul>
-            <p>The dashboard also highlights gender balance (56% M | 44% F) and age distribution — two quick proxies for
-                inclusion and succession health.</p>
-
-            <h2>From Insights to Action</h2>
-            <p>The goal here isn't to provide every answer. It's to empower stakeholders to ask the right questions.
-                When a VP sees a specific red flag in this view, they don't just see a number — they see a reason to
-                call for a detailed deep-dive analysis.</p>
-
-            <div class="arrow-steps">
-                <span>🔍 See the pattern</span> <span>❓ Ask the hard question</span> <span>📐 Demand the deep
-                    dive</span>
-            </div>
-
-            <div class="insight-quote">
-                ✨ You'll notice I don’t confuse <strong>low attrition with a healthy workforce</strong>.<br>
-                I also don’t assume concentration is bad until I test it against business strategy.<br><br>
-                <strong>This is how I think:</strong> quickly spot the signal, then go find the story behind it.
-            </div>
-
-
-            <!-- KAGGLE SECTION (public CSV + Power BI files) -->
-            <div class="kaggle-section">
-                <div style="font-weight: 500;">
-                    📂 Links to Public dataset & Power BI files
-                </div>
-                <div class="kaggle-links">
-                    <a href="https://www.kaggle.com/datasets/mujibullamusathiek/employeedata2025" class="btn-kaggle" target="_blank" rel="noopener noreferrer"
-                        id="kaggle-csv-placeholder">📊 View on Kaggle (CSV)</a>
-                    <a href="https://www.kaggle.com/datasets/mujibullamusathiek/workforce-summary-and-insights"
-                        class="btn-kaggle" target="_blank" rel="noopener noreferrer" id="kaggle-pbi-placeholder">📈 Power BI workbook (public)</a>
-                </div>
-            </div>
-            <p style="font-size:0.85rem; color:#4b5563; margin-top: -0.8rem;">Both CSV and .pbix are publicly available
-                for reference.</p>
-
-            <hr>
-            <p style="font-size:0.9rem;">📌 <strong>Portfolio note</strong>: This dashboard isn’t operational — it’s a
-                strategic risk-spotting lens. I publish code, DAX, and raw datasets on Kaggle to keep analysis
-                transparent and reproducible.</p>
-
-            <p style="margin-top: 1.2rem;">More write-ups on HR metrics, OD topics, and HR policy design can be found in
-                the adjacent posts —
-                this is part of a living portfolio that connects people analytics to real business decisions.</p>
-
-        </article>
-
-
-
-
-        <!-- additional bottom navigation hint (matching portfolio archive style) 
-        <div style="display: flex; gap: 1rem; justify-content: space-between; flex-wrap: wrap; margin-top: 1rem;">
-            <span style="font-size:0.85rem;">← Day 05: New Concept</span>
-            <span style="font-size:0.85rem;">Day 995: New Bees →</span>
-        </div>-->
-
-        <div class="footer-note">
-            People. Process. Performance. — HR analytics & Organizational design
-        </div>
+<div class="simple-content">
+    
+   
+    <h1 style="text-align: center;">One Glance, Three Risks: A Workforce Snapshot That Sparks Better Questions</h1>
+    <div class="post-meta-plain">
+        📊 HR metrics | 🧠 OD lens | ⚡ diagnostic snapshot
     </div>
-
-    <!-- tiny script to make placeholder kaggle links editable / visible 
-    (just UX hint, no external dependency) -->
-    <!--<script>
-        // This is just a safe UI reminder — the links remain editable in the HTML.
-        // The user should replace the '#' with actual Kaggle links after uploading.
-        const csvLink = document.getElementById('kaggle-csv-placeholder');
-        const pbiLink = document.getElementById('kaggle-pbi-placeholder');
-        if (csvLink) csvLink.setAttribute('href', 'https://www.kaggle.com/datasets/yourusername/workforce-summary');
-        if (pbiLink) pbiLink.setAttribute('href', 'https://www.kaggle.com/datasets/yourusername/powerbi-workforce');
-        // note: these are demo update scripts; the user will replace actual URLs manually.
-        console.log('Replace # with real Kaggle links after dataset upload 🚀');
-    </script>-->
-    <!-- the script above is a helper to show the structure; but final HTML expects manual link update.
-    For production, replace the href attributes with your Kaggle dataset and PowerBI file URLs. -->
+    
+    <!-- opening paragraph(s) from original -->
+    <p>Not every dashboard is built for monthly review meetings.<br>
+    Some are built for that quiet moment when a CHRO or VP-HR says:</p>
+    
+    <div class="simple-quote">
+        <em>“Show me where we might be vulnerable — before I walk into the next talent review.”</em>
+    </div>
+    
+    <p>This is one such view.</p>
+    
+   
+    <div class="plain-block">
+        <p><strong>⬇️ Workforce Summary & Insights (715 employees) ⬇️</strong></p>
+        <img src="https://adigitalcanvas.github.io/hcx/blogs/one-glance-three-risks/Workforce_Summary_and_Insights.jpg"
+             alt="Workforce dashboard snapshot: 715 employees, department distribution, tenure, age & gender metrics"
+             loading="lazy">
+        <!-- alt text preserves descriptive info -->
+    </div>
+    
+    <!-- following description text (as original) -->
+    <p>This view is designed specifically for those high-level moments where stakeholders need to identify organizational risks at a glance.</p>
+    
+  
+    <h2>The Strategy Behind the Dashboard</h2>
+    <p>Standard dashboards tell us what happened <em>last month</em>. This view tells us <strong>where to look next</strong>. Instead of a deep dive into every metric, this layout functions as a <strong>diagnostic tool</strong> — meant for the leader who has five minutes to spot "leaks" in the talent pipeline or cultural friction points before they become systemic crises.</p>
+    
+    <p>In this actual snapshot of <strong>715 employees</strong>, three signals stood out immediately:</p>
+    
+    <!-- risk list as simple bullet list (no special backgrounds) -->
+    <ul>
+        <li><strong>📍 52% of the workforce</strong> in just two departments (Delivery + Sales)</li>
+        <li><strong>📍 Less than 1% early-career</strong> vs 65%+ mid/ageing workforce</li>
+        <li><strong>📍 15% new (&lt;3 years tenure)</strong> alongside 65% long-tenured staff</li>
+    </ul>
+    
+    <p>The dashboard also highlights gender balance (56% M | 44% F) and age distribution — two quick proxies for inclusion and succession health.</p>
+    
+   
+    <h2>From Insights to Action</h2>
+    <p>The goal here isn't to provide every answer. It's to empower stakeholders to ask the right questions. When a VP sees a specific red flag in this view, they don't just see a number — they see a reason to call for a detailed deep-dive analysis.</p>
+    
+    <!-- simple inline text sequence (no fancy arrow-steps styling) -->
+    <p><strong>🔍 See the pattern</strong> &nbsp;→&nbsp; <strong>❓ Ask the hard question</strong> &nbsp;→&nbsp; <strong>📐 Demand the deep dive</strong></p>
+    
+    <div class="simple-quote">
+        You'll notice I don’t confuse <strong>low attrition with a healthy workforce</strong>.<br>
+        I also don’t assume concentration is bad until I test it against business strategy.<br><br>
+        This is how I think : quickly spot the signal, then go find the story behind it.
+    </div>
+    
+    <!-- =============================================
+         KAGGLE SECTION: plain links with standard HTML hrefs
+         (exactly as original Kaggle URLs, no placeholder changes)
+         ============================================= -->
+    <h2>Public Data & Files</h2>
+    <p><strong>📂 Links to Public dataset & Power BI files</strong></p>
+    <ul>
+        <li><a href="https://www.kaggle.com/datasets/mujibullamusathiek/employeedata2025" target="_blank" rel="noopener noreferrer">📊 View on Kaggle (CSV)</a> – employee dataset 2025</li>
+        <li><a href="https://www.kaggle.com/datasets/mujibullamusathiek/workforce-summary-and-insights" target="_blank" rel="noopener noreferrer">📈 Power BI workbook (public)</a> – Workforce Summary & Insights .pbix</li>
+    </ul>
+    <p style="font-size:0.85rem; color:#444;">Both CSV and .pbix are publicly available for reference.</p>
+    
+    <!-- =============================================
+         PORTFOLIO NOTE SECTION (pure text)
+         ============================================= -->
+    <hr>
+    <p><strong>📌 Portfolio note</strong>: This dashboard isn’t operational — it’s a strategic risk-spotting lens. I publish code, DAX, and raw datasets on Kaggle to keep analysis transparent and reproducible.</p>
+    
+    <p>More write-ups on HR metrics, OD topics, and HR policy design can be found in the adjacent posts — this is part of a living portfolio that connects people analytics to real business decisions.</p>
+    
+    <!-- =============================================
+         ADDITIONAL INFO: Footer text
+         ============================================= -->
+    <div class="footer-simple">
+        People. Process. Performance. — HR analytics &amp; Organizational design
+    </div>
+    
+    <!-- Note: No scripts, no extra CSS classes, no hidden divs. 
+         All formatting removed except structural text, headings, and images/links. -->
+</div>
 </body>
-
 </html>
