@@ -3,223 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me · Mujibulla M · HR & Organization Development</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Mujibulla Musathiek | Portfolio | Blog</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg-color: #CCC7C7;
+            --text-primary: #0e0e0e;
+            --text-secondary: #4a4a4a;
+            --border-normal: #9400D3;
+            --border-hover: #00ffff; /* Fluorescent Blue */
         }
 
         body {
-            background: #ffffff;
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            color: #111;
-            line-height: 1.55;
-            padding: 2rem 1.2rem;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .simple-content {
-            max-width: 880px;
+        /* Navigation 
+        nav {
+            width: 100%;
+            display: flex;
+            font-size: 16px;
+            justify-content: flex-end;
+            padding: 40px 15% 0;
+            box-sizing: border-box;
+            gap: 30px;
+        }
+        */
+
+        nav {
+            width: 100%;
+            display: flex;
+            color: var(--text-primary);
+             font-size: 18px; /* controls all links */
+            justify-content: flex-end;
+             padding: 40px 15% 0;
+            box-sizing: border-box;
+         gap: 30px;
+        }
+
+        /* Navigation 
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: none;
+        }
+        */
+        /* Hero Header */
+        header {
+            width: 70%;
+            padding: 100px 0 60px; 
             margin: 0 auto;
-            background: white;
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 1.2rem 0 0.25rem 0;
-            line-height: 1.2;
-            letter-spacing: -0.01em;
-        }
-
-        h2 {
-            font-size: 1.7rem;
-            font-weight: 600;
-            margin: 1.4rem 0 0.6rem 0;
-            border-bottom: 1px solid #e2e2e2;
-            padding-bottom: 0.2rem;
-        }
-
-        h3 {
-            font-size: 1.35rem;
-            font-weight: 600;
-            margin: 1.2rem 0 0.4rem 0;
-        }
-
-        p, li, .meta-text {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-        }
-
-        ul, ol {
-            margin: 0.5rem 0 0.75rem 1.8rem;
-        }
-        li {
-            margin-bottom: 0.4rem;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-        a:hover {
-            color: #004499;
-        }
-
-        hr {
-            margin: 1.8rem 0 1.2rem;
-            border: 0;
-            height: 1px;
-            background: #ddd;
-        }
-
-        .post-meta-plain {
-            font-size: 0.85rem;
-            color: #4a4a4a;
-            margin: 0.2rem 0 1.2rem 0;
-            border-left: 0px solid #ccc;
-            padding-left: 0.75rem;
-        }
-
-        .simple-quote {
-            margin: 1rem 0;
-            font-style: normal;
-            border-left: 3px solid #aaa;
-            padding-left: 1rem;
-            background: transparent;
-        }
-
-        .footer-simple {
-            margin-top: 2.5rem;
-            font-size: 0.8rem;
-            color: #4b5563;
-            border-top: 1px solid #eaeaea;
-            padding-top: 1.5rem;
             text-align: center;
         }
-        
-        .highlight-thought {
-            margin: 1.2rem 0;
-            padding: 0.75rem 0 0.75rem 1rem;
-            border-left: 3px solid #888;
-            background: transparent;
+
+        header h1 { 
+            font-size: 2.8rem; 
+            margin: 0 auto 20px;
+            font-weight: 400;
+            line-height: 1.2;
+            max-width: 800px;
         }
 
-        /* tool-badge styling (optional) */
-        .tool-badge {
-            display: inline-block;
-            background: #f0f0f0;
-            padding: 0.2rem 0.7rem;
-            margin: 0.2rem 0.3rem 0.2rem 0;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 450;
-            color: #1f2937;
+        header p { 
+           color: var(--text-secondary); 
+            font-size: 1.2rem; 
+            margin: 0 auto;
+            max-width: 600px;
         }
 
-        .two-col-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.2rem 1.2rem;
-            margin: 0.5rem 0 0.75rem 1rem;
-        }
-        .two-col-list li {
-            margin-bottom: 0.35rem;
+        /* Tiles Container */
+        .masonry-grid {
+            width: 70%;
+            column-count: 4;
+            column-gap: 20px;
+            padding-bottom: 100px;
         }
 
-        @media (max-width: 600px) {
-            .two-col-list {
-                grid-template-columns: 1fr;
-                margin-left: 1rem;
-            }
-            body {
-                padding: 1.2rem;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
+        @media (max-width: 1200px) { .masonry-grid { column-count: 3; width: 85%; } header { width: 85%; } }
+        @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+        @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+
+        /* Tile Styling */
+        .tile {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid var(--border-normal);
+            padding: 30px;
+            display: inline-block;;
+            flex-direction: column;
+            justify-content: flex-end;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-sizing: border-box;
+            max-height: 280px;
+            overflow: hidden;
+        }
+
+        .tile:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.15);
+        }
+
+        .h-1 { min-height: 200px; }
+        .h-2 { min-height: 300px; }
+        .h-3 { min-height: 230px; }
+        .h-4 { min-height: 250px; }
+
+        .tile span { 
+            display: none; //this hides the text in the tile
+            font-size: 11px; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: var(--text-secondary);
+        }
+
+        .tile h3 { 
+            margin: 10px 0 0; 
+            font-size: 1.2rem; 
+            font-weight: 500; 
+        }
+
+        .tile img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            filter: grayscale(100%);
+            transition: filter 0.4s ease;
+        }
+
+        .tile:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--bg-color);
+            z-index: 1000;
+            overflow-y: auto; /* Allow scrolling if external content is long */
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            width: 85%;
+            max-width: 1400px;
+            background: white; /* Added white background for readability of loaded pages */
+            padding: 40px;
+            min-height: 80vh;
+        }
+
+        .close-btn {
+            position: fixed; /* Keep close button visible */
+            top: 40px; right: 5%;
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 1001;
         }
     </style>
 </head>
 <body>
-<div class="simple-content">
-    
-    <!-- title & subtile: clean, direct -->
-    <h1>Mujibulla Musathiek <span style="font-weight:500;"><p><h3>Organization Development Specialist | HR Analyst</span></h3></p></h1>
-    <div class="post-meta-plain">
-        📍 Jeddah, KSA · 15+ years of experience in the Middle East
+
+    <nav>
+        <a href="https://adigitalcanvas.github.io/hcx/">Home</a>
+        <a href="https://adigitalcanvas.github.io/hcx/">Blog</a>
+        <a href="aboutm.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header>
+        <h1>People. Process. Performance.</h1>
+        <h2>What, when, and how make the difference.</h2>
+    </header>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="masonry-grid" id="tileContainer"></div>
+
+    <div id="projectModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-content" id="modalContentArea">
+            <h2 id="modalTitle" style="display: none;"></h2>
+            <div id="modalBody"></div>
+        </div>
     </div>
-    
-    <!-- CRISP about intro: 3 lines exactly as we refined -->
-    <p><strong>HR professional</strong> with strong functional expertise.<br>
-    Currently leading <strong>Organization Development</strong> initiatives.<br>
-    <strong>15+ years of experience</strong> across construction, petrochemical, environmental services, and facilities management in the Middle East.</p>
-    
-    <!-- Tools section (clean badges) -->
-    <h3>🛠️ Tools I Use Daily</h3>
-    <div style="margin: 0.5rem 0 0.8rem 0;">
-        <span class="tool-badge">Power BI</span>
-        <span class="tool-badge">Oracle EBS</span>
-        <span class="tool-badge">MS Office</span>
-        <span class="tool-badge">Cloud/AI tools</span>
-        <span class="tool-badge">HRMS/HRIS</span>
-    </div>
-    
-    <!-- What I Work On: two-column for crisp density but fully readable -->
-    <h3>📌 What I Work On</h3>
-    <ul class="two-col-list">
-        <li>HR analytics & dashboard development</li>
-        <li>Organizational development initiatives</li>
-        <li>HR process optimization</li>
-        <li>Workforce planning & deployment analysis</li>
-        <li>HR policy modernization</li>
-        <li>Job description development & role structuring</li>
-        <li>HR reporting & executive presentations</li>
-        <li>Oracle EBS HR implementation support</li>
-        <li>Recruitment & onboarding workflows</li>
-        <li>Employee lifecycle analytics</li>
-        <li>Mobilization & demobilization coordination</li>
-        <li>HR documentation & compliance systems</li>
-    </ul>
-    
-    <!-- Why this portfolio exists (authentic tone) -->
-    <h3>🧭 Why This Portfolio Exists</h3>
-    <p>This portfolio is a collection of:<br>
-    HR dashboard concepts · Workforce analytics ideas · Process improvement frameworks · Practical experiments using data & visualization.</p>
-    
-    <!-- Education & certifications (structured with em dash for readability) -->
-    <h3>🎓 Education & Certifications</h3>
-    <ul>
-        <li><strong>M.Sc.</strong> (Information Technology) – Alagappa University</li>
-        <li><strong>B.Sc.</strong> (Computer Science) – Bharathidasan University</li>
-        <li><strong>Microsoft Certified:</strong> Power BI Data Analyst Associate</li>
-        <li><strong>Certified Human Capital Analytics & Metrics Professional</strong> – Middle Earth HR</li>
-    </ul>
-    
-    <!-- Languages: inline format -->
-    <h3>🗣️ Languages</h3>
-    <p>English · Tamil · Hindi · Malayalam · Arabic</p>
-    
-    <!-- Beyond work / personal learning -->
-    <h3>🌱 Beyond Work</h3>
-    <p>Interested in reading about technology concepts, learning new tools, and planning for adaptation.<br>
-    Currently exploring <strong>how AI can make HR more human, not less</strong>.</p>
-    
-    <!-- About this site / transparent approach -->
-    <h3>⚡ About This Site</h3>
-    <p>I built this portfolio page from scratch using <strong>Gemini, ChatGPT, and Deepseek</strong>.<br>
-    I add content related to my work and interests regularly.<br>
-    The goal is to showcase my professional HR experience through a decent web medium — <strong>not to prove expertise in web development stack</strong> 😊</p>
-    
-    <!-- subtle horizontal rule and signature / consistent with template style -->
-    <hr>
-    <div class="footer-simple">
-        People. Process. Performance. — data-driven OD · human-centered analytics
-    </div>
-    
-</div>
+
+    <script>
+    // 1. DATA SECTION: Updated Project 01 with 'externalFile'
+    const myProjects = [
+        { 
+            title: "Power BI | Visualizaton", 
+            category: "Power BI | Visualizaton", 
+            content: "Loading project...", // Fallback text
+            externalFile: "https://adigitalcanvas.github.io/hcx/blogs/one-glance-three-risks/index.html",    // NEW: The file you uploaded to GitHub
+            size: "h-3",
+            image: "https://adigitalcanvas.github.io/hcx/blogs/one-glance-three-risks/Thumb_Workforce_Summary_and_Insights.jpg"
+            
+        },
+        { title: "Talent Strategy", category: "Talent Strategy", content: "Loading project...", externalFile: "https://adigitalcanvas.github.io/hcx/blogs/purple_squirrels/index.html", size: "h-3", image:"https://adigitalcanvas.github.io/hcx/blogs/purple_squirrels/purple_squirrels_thumb.png"},
+        { title: "Powerfull HR Tool", category: "Talent Strategy", content: "Loading project...", externalFile: "https://adigitalcanvas.github.io/hcx/blogs/powerfull_hr_tools/index.html", size: "h-3", image:"https://adigitalcanvas.github.io/hcx/blogs/powerfull_hr_tools/jd_thumb.png"},
+        { title: "Exit Interview", category: "Human-Centered HR", content: "Loading project...", externalFile: "https://adigitalcanvas.github.io/hcx/blogs/exit_interview/index.html", size: "h-3", image:"https://adigitalcanvas.github.io/hcx/blogs/exit_interview/thumb_exit_interview.jpg"}
+        
+    ];
+
+    const container = document.getElementById('tileContainer');
+
+    function renderTiles() {
+        container.innerHTML = ""; 
+        myProjects.forEach((project, index) => {
+            const tile = document.createElement('div');
+            tile.className = `tile ${project.size}`;
+            
+            // Pass the whole project object to the open function
+            tile.onclick = () => openModal(project);
+            
+            tile.innerHTML = `
+                <img src="${project.image}" alt="${project.title}">
+                <span>${project.category}</span>
+                <h3>${project.title}</h3>
+            `;
+            container.appendChild(tile);
+        });
+    }
+
+    // Updated Modal Logic to handle external HTML
+    function openModal(project) {
+        const titleEl = document.getElementById('modalTitle');
+        const bodyEl = document.getElementById('modalBody');
+        
+        titleEl.innerText = project.title;
+        bodyEl.innerHTML = project.content; // Show default/loading text first
+
+        // If there is an external file, fetch it
+        if (project.externalFile) {
+            fetch(project.externalFile)
+                .then(response => {
+                    if (!response.ok) throw new Error('File not found');
+                    return response.text();
+                })
+                .then(htmlContent => {
+                    bodyEl.innerHTML = htmlContent;
+                })
+                .catch(err => {
+                    bodyEl.innerHTML = "<p style='color:red;'>Failed to load content. Please ensure " + project.externalFile + " is uploaded to your GitHub repo.</p>";
+                });
+        }
+
+        document.getElementById('projectModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('projectModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+        // Clear content so it doesn't show old project next time you click
+        document.getElementById('modalBody').innerHTML = "";
+    }
+
+    renderTiles();
+</script>
+
+<!-- Cloudflare Web Analytics -->
+ <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "aa64f42c6ba6487bbee421ece09c9d71"}'></script><!-- End Cloudflare Web Analytics -->
+
+ <footer style="color: black;">
+    <p>
+        © 2026 | <a href="privacypolicy.html" style="color: black; text-decoration: none;">Privacy Policy</a>
+    </p>
+</footer>
+
 </body>
+
+
 </html>
